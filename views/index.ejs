@@ -1,0 +1,20 @@
+<html>
+	<head>
+		<title>Image of the Day</title>
+	</head>
+	<body>
+		<h1>Image of the Day</h1>
+		<form method="post" action="/create" enctype="multipart/form-data">
+			<center>
+				<% if (showImage) { %>
+				<img src="/image" />
+				<% } %>
+				<div>
+					<label for="file1">File 1: </label>
+					<input type="file" name="file1" />
+				</div>
+				<input type="submit" value="Create" />
+			</center>
+		</form>
+	</body>
+</html>
