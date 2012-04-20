@@ -1,0 +1,16 @@
+An image of the day app written in nodejs as an exercise.
+
+Thoughts
+- Really quick to do, about an hour.
+- No fuss. Really nice.
+
+Language: Node.js (Javascript)
+
+Problem Statement: 
+App Category: Utility tools
+DB: None 
+Simple part: 
+- make a website to upload image files 
+- on upload the image should be displayed on the page 
+Complex part 1: (Optional, if you complete simple part and want to take up something more challenging) 
+- show other details about the image file like size, date created and camera used. You can get these info from the image file properties
