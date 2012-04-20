@@ -1,0 +1,19 @@
+{
+  "author": "keza",
+  "name": "nodejs-picture",
+  "description": "Image of the Day",
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/kezakez/nodejs-picture.git"
+  },
+  "main": "server.js",
+  "engines": {
+    "node": "~0.6.15"
+  },
+  "dependencies": {
+    "express": "~2.5.9",
+    "ejs": "~0.7.1"
+  },
+  "devDependencies": {}
+}
