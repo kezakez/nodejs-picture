@@ -1,10 +1,8 @@
 var express = require("express"),
-	util = require("util"),
-	fs = require("fs");
+	multer = require("multer");
 
-var app = express.createServer();
-
-app.use(express.bodyParser());
+var app = express();
+var upload = multer({ storage: multer.memoryStorage() });
 
 app.set('view engine', 'ejs');
 app.set('views', __dirname + '/views');
@@ -17,21 +15,19 @@ app.get('/', function(req, res) {
 	res.render('index', { showImage: image !== null });
 });
 
-app.post('/create', function(req, res) {
+app.post('/create', upload.single('file1'), function(req, res) {
 	// added new
-	var tempPath = req.files.file1.path;
-	fs.readFile(tempPath, function(err, data) {
-		if (err) {
-			image = null;
-		}
-		image = data;
-		content = req.files.file1.mime;
-	});
+	if (req.file) {
+		image = req.file.buffer;
+		content = req.file.mimetype;
+	} else {
+		image = null;
+	}
 	res.redirect("/");
 });
 
 app.get('/image', function(req, res) {
-	res.contentType(content);
+	res.type(content);
 	res.send(image);
 });
 
