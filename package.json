@@ -9,11 +9,12 @@
   },
   "main": "server.js",
   "engines": {
-    "node": "~0.6.15"
+    "node": ">=18"
   },
   "dependencies": {
-    "express": "~2.5.9",
-    "ejs": "~0.7.1"
+    "express": "^4.22.3",
+    "ejs": "^3.1.10",
+    "multer": "^2.5.0"
   },
   "devDependencies": {}
 }
